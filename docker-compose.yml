@@ -1,16 +1,17 @@
-version: '3.8'
 
 services:
   # 1. The Database for our Java Core
   postgres:
     image: postgres:15
     container_name: envio-postgres
+    env_file:
+      - .env
     environment:
       POSTGRES_USER: ${DB_USER}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_DB: ${DB_NAME}
     ports:
-      - "{DB_PORT}:{DB_PORT}"
+      - "${DB_PORT}:${DB_PORT}"
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
