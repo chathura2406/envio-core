@@ -1,0 +1,25 @@
+# Environments
+.env
+
+# Java / Maven / Gradle build folders
+target/
+build/
+out/
+*.class
+*.jar
+*.war
+
+# IDE configuration files (IntelliJ, Eclipse, VSCode)
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
